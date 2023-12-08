@@ -16,9 +16,9 @@
         <div class="card bg-light">
             <div class="card-header text-success display-5 text-center">Todo App</div>
             <div class="card-body">
-                <form >
+                <form onsubmit="addTask(event)">
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Enter and add your new task">
+                        <input id="add-new-task" type="text" class="form-control" placeholder="Please enter your new task here">
                         <button type="submit" class="btn btn-success"><i class="fa-regular fa-square-plus fs-3"></i></button>
                     </div>
                 </form>
@@ -31,7 +31,7 @@
                     <span role="button" id="completed">Completed</span>
                 </div>
                 <div>
-                    <button class="btn btn-danger btn-sm">Clear All Tasks</button>
+                    <button onclick="clearAll()" class="btn btn-danger btn-sm">Clear All Tasks</button>
                 </div>
             </div>
         </div>
@@ -39,17 +39,7 @@
         <!--All tasks are listed in this area-->
         <div class="card mt-2">
             <ul class="list-group p-2" id="tasks-list">
-                <li class="list-group-item" id="1">
-                    <div class="form-check d-flex justify-content-between align-items-center" >
-                        <input class="form-check-input" type="checkbox" role="checkbox" id="1">
-                        <div class="input-group">
-                            <input type="text" class="form-control" value="First Task">
-                            <button class="btn btn-warning fs-4"><i class="fa-regular fa-pen-to-square text-white"></i></button>
-                            <button class="btn btn-danger fs-4"><i class="fa-regular fa-trash-can text-white"></i></button>
-                        </div>
-                    </div>
-                </li>
-
+         
             </ul>
 
         </div>
